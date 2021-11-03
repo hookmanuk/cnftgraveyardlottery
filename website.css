@@ -1,0 +1,447 @@
+@font-face {
+    font-family: 'Spooky';
+    src: url('graveyard/SpookMansionRegular-ywBde.ttf') format('truetype');
+}
+
+.headerbanner {
+    width:100%;    
+}
+
+.headerbanner {
+    width: 80%;
+    margin: 10%;
+    text-align: center;
+}
+
+html,
+body {
+    /*height: 100%;*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    //text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    /* Location of the image */
+    background: url(graveyard/background1920.png) no-repeat center center fixed;
+    /* Background image doesn’t tile */    
+    /* This is what makes the background image rescale based
+on the container’s size */
+    background-size: cover;
+    /* Set a background color that will be displayed
+while the background image is loading */
+    background-color: #000;
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    font-family: Spooky;
+    text-shadow: 2px 2px black;
+}
+
+.background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.backgroundcolour {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    background-color: #000;
+}
+
+.content {
+    padding: 4%;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+    word-break: break-word;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 90px;
+    }
+
+    .content {        
+        font-size: 24px;
+    }
+}
+
+a {
+    color: #FFF;
+}
+
+a:active {
+    color: #FFF;
+}
+
+.trust img {
+    width: 90%;
+    padding: 5%;
+}
+
+.sectiontitle {
+    font-size: 50px;    
+    font-family: Spooky;
+}
+
+.twitter img {    
+    position: relative;
+    top: 25px;
+    padding:10px;
+}
+
+
+
+.footericons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footericons img {
+    width: 48px;
+    color: #FFFFFF;
+    margin: 20px;
+}
+
+.smallprint {
+    display: none;
+}
+
+.details {
+    backdrop-filter: blur(4px);
+    background: #22222255;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.tabs {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    min-width: 240px;
+    background-color: #00000077;
+    backdrop-filter: blur(4px);    
+}
+
+    .tabs input[name="tab-control"] {
+        display: none;
+    }
+
+    .tabs .content section h2,
+    .tabs ul li label {
+        font-family: "Montserrat";
+        font-weight: bold;
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .tabs ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+        .tabs ul li {
+            box-sizing: border-box;
+            flex: 1;
+            width: 25%;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+            .tabs ul li label {
+                transition: all 0.3s ease-in-out;
+                color: #DDDDDD;
+                padding: 5px auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                white-space: nowrap;
+                -webkit-touch-callout: none;
+            }
+
+                .tabs ul li label br {
+                    display: none;
+                }
+
+                .tabs ul li label svg {
+                    fill: #DDDDDD;
+                    height: 1.2em;
+                    vertical-align: bottom;
+                    margin-right: 0.2em;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .tabs ul li label:hover,
+                .tabs ul li label:focus,
+                .tabs ul li label:active {
+                    outline: 0;
+                    color: #FCFCFC;
+                }
+
+                    .tabs ul li label:hover svg,
+                    .tabs ul li label:focus svg,
+                    .tabs ul li label:active svg {
+                        fill: #FCFCFC;
+                    }
+
+    .tabs .slider {
+        position: relative;
+        width: 20%;
+        transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+    }
+
+        .tabs .slider .indicator {
+            position: relative;
+            width: 50px;
+            max-width: 100%;
+            margin: 0 auto;
+            height: 4px;
+            background: #ffffff;
+            border-radius: 1px;
+        }
+
+
+
+        .tabs .content section {
+            display: none;
+           
+            line-height: 1.4;
+        }
+
+            .tabs .content section h2 {
+                color: #428bff;
+                display: none;
+            }
+
+                .tabs .content section h2::after {
+                    content: "";
+                    position: relative;
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background: #428bff;
+                    margin-top: 5px;
+                    left: 1px;
+                }
+
+    .tabs
+    input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+        cursor: default;
+        color: #ffffff;
+    }
+
+        .tabs
+        input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label
+        svg {
+            fill: #ffffff;
+        }
+
+@media (max-width: 600px) {
+    .tabs
+    input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
+    transform: translateX(0%);
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(1):checked ~ .content > section:nth-child(1) {
+    display: block;
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+    cursor: default;
+    color: #ffffff;
+}
+
+    .tabs
+    input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label
+    svg {
+        fill: #ffffff;
+    }
+
+@media (max-width: 600px) {
+    .tabs
+    input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
+    transform: translateX(100%);
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(2):checked ~ .content > section:nth-child(2) {
+    display: block;
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+    cursor: default;
+    color: #ffffff;
+}
+
+    .tabs
+    input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label
+    svg {
+        fill: #ffffff;
+    }
+
+@media (max-width: 600px) {
+    .tabs
+    input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
+    transform: translateX(200%);
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(3):checked ~ .content > section:nth-child(3) {
+    display: block;
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+    cursor: default;
+    color: #ffffff;
+}
+
+    .tabs
+    input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label
+    svg {
+        fill: #ffffff;
+    }
+
+@media (max-width: 600px) {
+    .tabs
+    input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
+    transform: translateX(300%);
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(4):checked ~ .content > section:nth-child(4) {
+    display: block;
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(5):checked ~ ul > li:nth-child(5) > label {
+    cursor: default;
+    color: #ffffff;
+}
+
+    .tabs
+    input[name="tab-control"]:nth-of-type(5):checked ~ ul > li:nth-child(5) > label
+    svg {
+        fill: #ffffff;
+    }
+
+@media (max-width: 600px) {
+    .tabs
+    input[name="tab-control"]:nth-of-type(5):checked ~ ul > li:nth-child(5) > label {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(5):checked ~ .slider {
+    transform: translateX(400%);
+}
+
+.tabs
+input[name="tab-control"]:nth-of-type(5):checked ~ .content > section:nth-child(5) {
+    display: block;
+}
+
+@keyframes content {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 1000px) {
+    .tabs ul li label {
+        white-space: initial;
+    }
+
+        .tabs ul li label br {
+            display: initial;
+        }
+
+        .tabs ul li label svg {
+            height: 1.5em;
+        }
+}
+
+@media (max-width: 600px) {
+    .tabs ul li label {
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+        .tabs ul li label span {
+            display: none;
+        }
+
+    .tabs .slider {
+        display: none;
+    }
+
+    .tabs .content {
+        margin-top: 20px;
+    }
+
+        .tabs .content section h2 {
+            display: block;
+        }
+}
