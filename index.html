@@ -200,8 +200,8 @@
 
         Http.onreadystatechange = (e) => {
             if (e.currentTarget.readyState == 4 && e.currentTarget.status == 200 && e.currentTarget.responseText != '') {
-                var stake = parseFloat(JSON.parse(Http.responseText).controlled_amount) * 0.9 / 1000000;
-                document.getElementById('stakeamount').textContent = stake.toFixed(2) + " ";
+                var stake = ((parseFloat(JSON.parse(Http.responseText).controlled_amount) / 1000000) - 10) * 0.9;
+                document.getElementById('stakeamount').textContent = stake.toFixed(2).replaceAll('0','O') + " ";
             }
         }
     </script>
