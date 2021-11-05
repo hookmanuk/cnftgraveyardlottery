@@ -77,7 +77,7 @@
             <div class="content">
                 <section>
                     <div class="sectiontitle">
-                        WIN
+                        WIN <span id="stakeamount">...... ADA</span>
                     </div>
                     <p>
                         For an entry to the lottery send a CNFT to:<br>
@@ -190,5 +190,20 @@
                 .then(function () { console.log("Service Worker Registered"); });
         }
     </script>    
+    
+    <script>
+        const Http = new XMLHttpRequest();        
+        const url = 'https://cardano-mainnet.blockfrost.io/api/v0/accounts/stake1uxmddcnrcqdg4wcf850vtkhvws8dwcp6laqsvc0ckrnffusvk5lvg';
+        Http.open("GET", url);
+        Http.setRequestHeader('project_id', 'mainnetNjd8GnHzFnwVpznqPiO2hAJjfFEgezC0');
+        Http.send();
+
+        Http.onreadystatechange = (e) => {
+            if (e.currentTarget.readyState == 4 && e.currentTarget.status == 200 && e.currentTarget.responseText != '') {
+                var stake = parseFloat(JSON.parse(Http.responseText).controlled_amount) * 0.9 / 1000000;
+                document.getElementById('stakeamount').textContent = stake.toFixed(2) + " ADA";
+            }
+        }
+    </script>
 </body>
 </html>
